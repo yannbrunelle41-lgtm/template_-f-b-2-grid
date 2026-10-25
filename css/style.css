@@ -135,27 +135,75 @@ h3 {
 
  .card2::before {
     content: "";
-    position: absolute; /* collé en haut */
-    left: 0; /* collé à gauche */    /* grâce à ces 3 valeurs on a pas besoin de width: 100% et surtout le :before ne dépend pas du margin ou padding */
-    width: 100%; /* collé à droite */ 
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
     height: 0.355rem;
     background-color: #EA5454;
 }
 
 .card3::before {
     content: "";
-    position: absolute; /* collé en haut */
-    left: 0; /* collé à gauche */    /* grâce à ces 3 valeurs on a pas besoin de width: 100% et surtout le :before ne dépend pas du margin ou padding */
-    width: 100%; /* collé à droite */ 
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
     height: 0.355rem;
     background-color: #FCAE4A;
 }
 
 .card4::before {
     content: "";
-    position: absolute; /* collé en haut */
-    left: 0; /* collé à gauche */    /* grâce à ces 3 valeurs on a pas besoin de width: 100% et surtout le :before ne dépend pas du margin ou padding */
-    width: 100%; /* collé à droite */ 
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
     height: 0.355rem;
     background-color: #549EF2;
+}
+
+@media (min-width: 768px) {
+
+.cards {
+    display: grid; /* pas utile puisque je l'ai déjà défini line 97 mais c'est pour moi */
+    grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes de largeur égale occupant toute la largeur dispo - repeat permet de répéter la configuration 3x - j'aurai pu écrire grid-template-columns: 1fr 1fr 1fr; */
+    gap: 3rem;
+}
+
+.card1 {
+    grid-column-start: 1; /* grid-area: 1 / 1 / 3 / 2; serait mieux mais pour l'instant je préfère garder l'écriture complète */
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center; /* permet de centrer verticalement l'élément dans sa zone de grid */
+}
+
+.card2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.card3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.card4 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center;
+}
+
+.hero {
+    margin-bottom: 6.4rem;
+    max-width: 54rem; 
+}
+
+.cards section {
+    padding: 0 3.2rem 3.2rem 3.2rem;
+}
 }
