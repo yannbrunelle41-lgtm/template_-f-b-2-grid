@@ -1,0 +1,117 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  background-color: #FAFAFA;
+  padding: 8.5rem 3.2rem 7.8rem 3.2rem;
+}
+
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/poppins-v24-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.title1 {
+    font-family: 'Poppins';
+    font-size: 2.4rem;
+    letter-spacing: 0.017rem;
+    font-weight: 200;
+    color: #4D4F62;
+}
+
+.title2 {
+    display: block;
+    font-family: 'Poppins';
+    font-size: 2.4rem;
+    letter-spacing: 0.017rem;
+    font-weight: 600;
+    color: #4D4F62;
+    margin-top: 0.1rem;
+    margin-bottom: 1.6rem;
+}
+
+.p-title {
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    letter-spacing: 0.01rem;
+    color: #4D4F6250;
+    font-weight: 400;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.8rem;
+    background-color: #FFFFFF;
+}
+
+img {
+    width: 5.7rem;
+    height: 5.7rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 7.6rem;
+}
+
+h3 {
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4D4F62;
+    margin-bottom: 0.1rem;
+}
+
+.cards {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.cards section {
+    box-shadow: 0 1.5rem 3rem -1.1rem #83A6D2;
+    padding: 2.8rem;
+
+}
+
+.cards p {
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    color: #4D4F6250;
+    line-height: 2.3rem;
+    letter-spacing: 0.009rem;
+    margin-bottom: 3.3rem;
+}
+
+.cards img {
+    align-self: flex-end;
+}
