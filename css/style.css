@@ -96,6 +96,7 @@ h3 {
 .cards {
     display: grid;
     gap: 2.5rem;
+    grid-auto-rows: 1fr;
 }
 
 .cards section {
@@ -126,9 +127,9 @@ h3 {
 
 .card1::before {
     content: "";
-    position: absolute; /* collé en haut */
-    left: 0; /* collé à gauche */    /* grâce à ces 3 valeurs on a pas besoin de width: 100% et surtout le :before ne dépend pas du margin ou padding */
-    width: 100%; /* collé à droite */ 
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
     height: 0.355rem;
     background-color: #44D3D2;
 }
@@ -160,6 +161,11 @@ h3 {
     background-color: #549EF2;
 }
 
+.cards img {            /* permet de pousser les logos vers le bas de la card tout en gardant le padding de la section */
+    align-self: flex-end; 
+    margin-top: auto;
+}
+
 @media (min-width: 768px) {
 
 .cards {
@@ -169,33 +175,31 @@ h3 {
 }
 
 .card1 {
-    grid-column-start: 1; /* grid-area: 1 / 1 / 3 / 2; serait mieux mais pour l'instant je préfère garder l'écriture complète */
+    grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    align-self: center; /* permet de centrer verticalement l'élément dans sa zone de grid */
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 .card2 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 3;
 }
 
 .card3 {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
 }
 
 .card4 {
     grid-column-start: 3;
     grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    align-self: center;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 .hero {
