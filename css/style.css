@@ -1,36 +1,38 @@
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  font-size: 16px;
-  background-color: #FAFAFA;
-  padding: 8.5rem 3.2rem 7.8rem 3.2rem;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    padding: 8.5rem 3.2rem 7.8rem 3.2rem;
 }
 
 /* poppins-200 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 200;
-  src: url('../fonts/poppins-v24-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/poppins-v24-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* poppins-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* poppins-600 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 .title1 {
@@ -60,7 +62,7 @@ body {
     font-weight: 400;
 }
 
-section {
+section, article {
     display: flex;
     flex-direction: column;
     border-radius: 0.8rem;
@@ -99,11 +101,9 @@ h3 {
     grid-auto-rows: 1fr;
 }
 
-.cards section {
+.cards article {
     box-shadow: 0 1.5rem 3rem -1.1rem #83A6D2;
     padding: 0 2.8rem 2.8rem 2.8rem;
-
-
 }
 
 .cards p {
@@ -113,101 +113,100 @@ h3 {
     line-height: 2.3rem;
     letter-spacing: 0.009rem;
     margin-bottom: 3.3rem;
-
 }
 
 .cards img {
     align-self: flex-end;
 }
 
- .card1, .card2, .card3, .card4{
+.card1, .card2, .card3, .card4 {
     position: relative;
     overflow: hidden;
- }
+}
 
 .card1::before {
     content: "";
-    position: absolute; 
-    left: 0; 
-    width: 100%; 
+    position: absolute;
+    left: 0;
+    width: 100%;
     height: 0.355rem;
     background-color: #44D3D2;
 }
 
- .card2::before {
+.card2::before {
     content: "";
-    position: absolute; 
-    left: 0; 
-    width: 100%; 
+    position: absolute;
+    left: 0;
+    width: 100%;
     height: 0.355rem;
     background-color: #EA5454;
 }
 
 .card3::before {
     content: "";
-    position: absolute; 
-    left: 0; 
-    width: 100%; 
+    position: absolute;
+    left: 0;
+    width: 100%;
     height: 0.355rem;
     background-color: #FCAE4A;
 }
 
 .card4::before {
     content: "";
-    position: absolute; 
-    left: 0; 
-    width: 100%; 
+    position: absolute;
+    left: 0;
+    width: 100%;
     height: 0.355rem;
     background-color: #549EF2;
 }
 
 .cards img {            /* permet de pousser les logos vers le bas de la card tout en gardant le padding de la section */
-    align-self: flex-end; 
+    align-self: flex-end;
     margin-top: auto;
 }
 
 @media (min-width: 768px) {
 
-.cards {
-    display: grid; /* pas utile puisque je l'ai déjà défini line 97 mais c'est pour moi */
-    grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes de largeur égale occupant toute la largeur dispo - repeat permet de répéter la configuration 3x - j'aurai pu écrire grid-template-columns: 1fr 1fr 1fr; */
-    gap: 3rem;
-}
+    .cards {
+        display: grid; /* pas utile puisque je l'ai déjà défini line 97 mais c'est pour moi */
+        grid-template-columns: repeat(3, 1fr); /* Création de 3 colonnes de largeur égale occupant toute la largeur dispo - repeat permet de répéter la configuration 3x - j'aurai pu écrire grid-template-columns: 1fr 1fr 1fr; */
+        gap: 3rem;
+    }
 
-.card1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
+    .card1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
 
-.card2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
+    .card2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 
-.card3 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
+    .card3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
 
-.card4 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
+    .card4 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
 
-.hero {
-    margin-bottom: 6.4rem;
-    max-width: 54rem; 
-}
+    .hero {
+        margin-bottom: 6.4rem;
+        max-width: 54rem;
+    }
 
-.cards section {
-    padding: 0 3.2rem 3.2rem 3.2rem;
-}
+    .cards article {
+        padding: 0 3.2rem 3.2rem 3.2rem;
+    }
 }
